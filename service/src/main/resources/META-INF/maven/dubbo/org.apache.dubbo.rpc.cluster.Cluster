@@ -1,0 +1,6 @@
+uspFailover=com.chl.framework.dubbo.FailoverCluster
+uspAvailable=com.chl.framework.dubbo.AvailableCluster
+uspFailfast=com.chl.framework.dubbo.FailfastCluster
+uspFailsafe=com.chl.framework.dubbo.FailsafeCluster
+uspFailback=com.chl.framework.dubbo.FailbackCluster
+uspForking=com.chl.framework.dubbo.ForkingCluster

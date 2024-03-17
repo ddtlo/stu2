@@ -1,0 +1,35 @@
+spring:
+  profiles:
+    active: "@profileActive@"
+  autoconfigure:
+    exclude:
+      - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
+      - org.springframework.boot.autoconfigure.web.reactive.ReactiveWebServerFactoryAutoConfiguration
+      - org.springframework.boot.autoconfigure.webservices.WebServicesAutoConfiguration
+      - org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration
+      - org.springframework.boot.autoconfigure.websocket.servlet.WebSocketMessagingAutoConfiguration
+#      - org.springframework.boot.autoconfigure.websocket.servlet.WebSocketServletAutoConfiguration
+      - org.springframework.boot.autoconfigure.websocket.reactive.WebSocketReactiveAutoConfiguration
+
+  application:
+    name: stu2
+  data:
+    elasticsearch:
+      client:
+
+        reactive:
+          endpoints: 49.235.162.90:51221, 49.235.162.90:51222
+#      cluster-name: es-cluster
+#    username:
+#    password:
+#    同义词配置synonym:
+#      path: http://192.168.1.1:9048/laokou-service/synonym
+server:
+  port: 23010
+  servlet:
+    context-path: /api
+  error:
+    path: /error
+myproperties:
+  size: 10
+  name: 自定义配置
